@@ -1,0 +1,27 @@
+server:
+  port: 8181
+  servlet:
+    context-path: /audiary
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./records_db
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        ddl-auto: create
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: false
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+google-drive:
+  folder:
+    id: '1u9F-Vm107XWk8HjzmYn1Ow19C4SEc9Zt'
